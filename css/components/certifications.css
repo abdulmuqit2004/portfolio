@@ -1,0 +1,215 @@
+/**
+ * RELEVANT COURSEWORK COMPONENT
+ */
+
+/* Section Wrapper */
+.certifications {
+    background-color: var(--bg-color-alt);
+    position: relative; /* For positioning arrow container */
+}
+
+/* Horizontal Scroll Wrapper */
+.certifications .horizontal-scroll-wrapper {
+    position: relative;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    margin-bottom: -1rem;
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+.certifications .horizontal-scroll-wrapper::-webkit-scrollbar {
+    display: none;             /* Chrome, Safari, Opera */
+}
+
+/* Scroll Content: horizontal row */
+.certifications .scroll-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+    padding-bottom: 1.5rem;
+    margin-top: 0;
+}
+
+/* Grid helper (kept for compatibility) */
+.certifications-grid {
+    margin-top: 0;
+}
+
+/* Coursework Card */
+.cert-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius-lg);
+    padding: 1.75rem;
+    box-shadow: 0 5px 15px var(--shadow-color);
+    transition: all var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+
+    min-height: 220px;
+    flex: 0 0 auto;
+    width: 320px;
+    margin-right: 1.5rem;
+    margin-bottom: 0;
+}
+.cert-card:last-child {
+    margin-right: 0;
+}
+
+/* Colored left border */
+.cert-card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+/* Icon */
+.cert-icon {
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 5px 15px rgba(var(--primary-color-rgb), 0.3);
+}
+.cert-icon i {
+    font-size: 1.5rem;
+}
+
+/* Title */
+.cert-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 0.35rem;
+    min-height: auto;
+}
+
+/* Status (Completed / Planned) */
+.cert-status {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.cert-status.completed {
+    color: #22c55e; /* green */
+}
+.cert-status.planned {
+    color: #f97316; /* orange */
+}
+
+/* Planned card subtle styling */
+.cert-card.planned {
+    opacity: 0.97;
+}
+
+/* Description */
+.cert-description {
+    margin-top: 0.35rem;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: 0;
+}
+
+/* Hide old cert-specific elements if present (defensive) */
+.cert-issuer,
+.cert-provider,
+.cert-date,
+.cert-validity,
+.cert-links,
+.cert-link,
+.cert-badge {
+    display: none !important;
+}
+
+/* Scroll Arrows */
+.certifications .scroll-arrow-container {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    padding: 0 var(--spacing-sm);
+    transform: translateY(-50%);
+    z-index: 20;
+    pointer-events: none;
+}
+
+.certifications .scroll-arrow {
+    background-color: rgba(30, 30, 30, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    pointer-events: all;
+}
+.certifications .scroll-arrow:hover {
+    background-color: rgba(var(--primary-color-rgb), 0.8);
+}
+.certifications .scroll-arrow.disabled {
+    opacity: 0.3;
+    cursor: default;
+    background-color: rgba(50,50,50,0.3);
+}
+.certifications .scroll-arrow i {
+    font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cert-card {
+        width: 300px;
+        min-height: auto;
+    }
+
+    .certifications .scroll-arrow-container {
+        top: 50%;
+        padding: 0 var(--spacing-xs);
+    }
+
+    .certifications .scroll-arrow {
+        width: 36px;
+        height: 36px;
+    }
+
+    .certifications .scroll-arrow i {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .cert-card {
+        width: 280px;
+    }
+
+    .certifications .scroll-arrow-container {
+        top: 55%;
+    }
+}

@@ -1,0 +1,191 @@
+<!-- Projects Section -->
+<section class="projects section horizontal-scroll-enabled" id="projects">
+    <div class="container">
+        <div class="section-heading">
+            <h2>My Projects</h2>
+            <div class="underline"></div>
+        </div>
+
+        <!-- Filters -->
+        <div class="project-filters">
+            <button class="filter-button active" data-filter="all">All Projects</button>
+            <button class="filter-button" data-filter="sde">Software Development</button>
+            <button class="filter-button" data-filter="dsml">Data Science & ML</button>
+        </div>
+
+        <!-- Horizontal Scroll Arrows -->
+        <div class="scroll-arrow-container">
+            <button class="scroll-arrow prev-arrow" aria-label="Previous items">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="scroll-arrow next-arrow" aria-label="Next items">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Horizontal Scroll Wrapper -->
+        <div class="horizontal-scroll-wrapper">
+            <div class="scroll-content projects-grid">
+
+                <!-- Film Fusion -->
+                <div class="project-card" data-category="sde">
+                    <div class="project-image">
+                        <img src="assets/projects/film-fusion.png" alt="Film Fusion - Full-Stack Movie Catalog Web App">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Film Fusion – Full-Stack Movie Catalog Web App</h3>
+                        <p class="project-description">
+                            React + Firebase web app with auth, search, filtering, favorites, and a responsive UI.
+                            Built as a full-stack team project to learn real-world app structure, deployment, and testing.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">React Router</span>
+                            <span class="tech-tag">Bulma CSS</span>
+                            <span class="tech-tag">Vitest</span>
+                            <span class="tech-tag">Vercel</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/abdulmuqit2004/filmfusion" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Multiplayer Battleship Game -->
+                <div class="project-card" data-category="sde">
+                    <div class="project-image">
+                        <img src="assets/projects/battleship.png" alt="Multiplayer Battleship Game">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Multiplayer Battleship Game</h3>
+                        <p class="project-description">
+                            Full Java Swing + sockets implementation of Battleship with client-server architecture,
+                            real-time turns, custom protocol design, and modular OOP structure.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Java Swing</span>
+                            <span class="tech-tag">Sockets</span>
+                            <span class="tech-tag">Multithreading</span>
+                            <span class="tech-tag">Client-Server</span>
+                            <span class="tech-tag">Git</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/abdulmuqit2004/battleship-game" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FileShare Application -->
+                <div class="project-card" data-category="sde">
+                    <div class="project-image">
+                        <img src="assets/projects/fileshare.jpg" alt="FileShare Application">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">FileShare Application</h3>
+                        <p class="project-description">
+                            Lightweight Java file-sharing tool using sockets and a Swing UI for upload, download,
+                            and preview between client and server with concurrent, thread-safe handling.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Java Swing</span>
+                            <span class="tech-tag">Sockets</span>
+                            <span class="tech-tag">Multithreading</span>
+                            <span class="tech-tag">Client-Server</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/abdulmuqit2004/FileShare" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spam Detector (Naive Bayes) -->
+                <div class="project-card" data-category="dsml">
+                    <div class="project-image">
+                        <img src="assets/projects/spam-detector.png" alt="Spam Detector Application">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Spam Detector – Naive Bayes Classifier</h3>
+                        <p class="project-description">
+                            Java-based GUI app using a Naive Bayes model with Laplace smoothing to classify emails
+                            as spam/ham and display accuracy metrics and results in a clean interface.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Naive Bayes</span>
+                            <span class="tech-tag">Java Swing</span>
+                            <span class="tech-tag">File I/O</span>
+                            <span class="tech-tag">Model Evaluation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/abdulmuqit2004/SpamDetector" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Tech Support Assistant -->
+                <div class="project-card" data-category="dsml">
+                    <div class="project-image">
+                        <img src="assets/projects/ai-tech-support.png" alt="AI Tech Support Assistant">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI Tech Support Assistant</h3>
+                        <p class="project-description">
+                            Hackathon prototype in React integrating the Gemini API to provide instant
+                            technical answers and step-by-step guided troubleshooting via dual AI modes.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Gemini API</span>
+                            <span class="tech-tag">REST APIs</span>
+                            <span class="tech-tag">Async JS</span>
+                            <span class="tech-tag">Frontend Development</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/abdulmuqit2004/AI-Tech-Support" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NBA Salary Analysis -->
+                <div class="project-card" data-category="dsml">
+                    <div class="project-image">
+                        <img src="assets/projects/nba-salary.png" alt="NBA Salary Analysis">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">NBA Salary Analysis</h3>
+                        <p class="project-description">
+                            Data analysis project exploring which performance metrics most impact NBA salaries
+                            using Python, Pandas, NumPy, and Matplotlib for EDA and visualization.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">NumPy</span>
+                            <span class="tech-tag">Matplotlib</span>
+                            <span class="tech-tag">EDA</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/abdulmuqit2004/NBA-Metrics-Analysis" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- /.scroll-content -->
+        </div> <!-- /.horizontal-scroll-wrapper -->
+    </div>
+</section>

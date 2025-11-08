@@ -1,0 +1,189 @@
+/**
+ * EXTRACURRICULAR & LEADERSHIP COMPONENT
+ */
+
+/* Section spacing */
+.achievements.section {
+    padding: 4rem 0;
+}
+
+/* Wrapper (kept flexible if you add more cards later) */
+.achievements-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin: 2.5rem auto 0;
+    max-width: 900px;
+}
+
+/* Main Card */
+.achievement-card {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: var(--shadow-elevation-medium);
+    overflow: hidden;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid var(--border-color-light, #e0e0e0);
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.achievement-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-elevation-high);
+}
+
+/* Image / Banner */
+.achievement-image {
+    width: 100%;
+    height: 260px;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+/* Gradient overlay for readability */
+.achievement-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.15) 0%,
+        rgba(0, 0, 0, 0.8) 100%
+    );
+    z-index: 1;
+    border-radius: 16px 16px 0 0;
+}
+
+/* Text overlay */
+.achievement-overlay {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: left;
+}
+
+/* Title */
+.achievement-title {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin: 0 0 0.3rem;
+    color: #fff;
+    line-height: 1.25;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Year pill */
+.achievement-year {
+    display: inline-block;
+    margin-top: 0.15rem;
+    padding: 0.25rem 0.7rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #f5f5f5;
+    background-color: rgba(255, 255, 255, 0.16);
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* Details */
+.achievement-details {
+    padding: 1.6rem 1.75rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* Org */
+.achievement-organization {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--primary-color-dark, var(--primary-color));
+    margin: 0;
+}
+
+/* Description */
+.achievement-description {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--text-color-medium, var(--text-color));
+    margin: 0;
+}
+
+/* Tags */
+.achievement-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.25rem;
+}
+
+.achievement-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    background-color: rgba(var(--primary-color-rgb), 0.08);
+    color: var(--primary-color);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.achievement-tag i {
+    font-size: 0.7rem;
+    color: inherit;
+}
+
+.achievement-tag:hover {
+    background-color: rgba(var(--primary-color-rgb), 0.16);
+    color: var(--primary-color-dark, var(--primary-color));
+}
+
+/* Simple fade-in animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dark theme adjustments */
+body.dark-theme .achievement-card {
+    background-color: #333;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .achievement-description,
+body.dark-theme .achievement-organization {
+    color: #e5e5e5;
+}
+
+body.dark-theme .achievement-tag {
+    background-color: rgba(67, 97, 238, 0.18);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .achievements-wrapper {
+        max-width: 100%;
+        gap: 2rem;
+    }
+
+    .achievement-image {
+        height: 220px;
+    }
+}
