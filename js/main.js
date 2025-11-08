@@ -34,8 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
             body.classList.add('dark-theme');
         } else if (savedTheme === 'light') {
             body.classList.add('light-theme');
-        } else if (prefersDarkScheme) {
-            body.classList.add('dark-theme');
         } else {
             body.classList.add('light-theme'); // Default to light theme
         }
