@@ -1,27 +1,68 @@
 <!-- Hero Section -->
 <section class="hero" id="home">
+    <!-- Floating particles background -->
+    <div class="hero-particles" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
     <div class="container">
         <div class="hero-content">
             <div class="hero-text">
-                <p class="hero-greeting">Hello, I'm</p>
+                <p class="hero-greeting mono">// hello world</p>
                 <h1 class="hero-name">Abdul Muqit Afzal</h1>
-                <h2 class="hero-title">Fourth year Computer Science (Data Science Specialization) student at Ontario Tech University</h2>
-                <p class="hero-description">💻 Software Developer | Data-Driven Innovator | Creative Problem Solver 🚀 Driven to craft solutions that make a real impact — one line of code at a time. 🌐
-Check out my work and join me on this journey of innovation and discovery. 💡</p>
+                <h2 class="hero-title">
+                    I build &amp; learn:&nbsp;
+                    <span id="typed-roles" class="typed-highlight"></span>
+                </h2>
+                <p class="hero-description">CS + Data Science @ Ontario Tech — always curious, always shipping. I pick up new technologies fast and turn them into real things. Whether it's a machine learning pipeline or a full-stack web app, I'm here to make it work.</p>
+
                 <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                    <a href="#projects" class="btn btn-secondary">View My Work</a>
-                </div>                
-                    <div class="social-links">                    
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Get in Touch
+                    </a>
+                    <a href="#projects" class="btn btn-outline">
+                        <i class="fas fa-code"></i> View My Work
+                    </a>
+                    <a href="assets/resumes/Abdul_Muqit_s_Data_Resume.pdf" download class="btn btn-ghost">
+                        <i class="fas fa-download"></i> Resume
+                    </a>
+                </div>
+
+                <div class="social-links">
                     <a href="https://www.linkedin.com/in/abdul-muqit-afzal/" class="social-link" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/abdulmuqit2004" class="social-link" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="assets/images/AbdulMuqit.jpg" alt="AbdulMuqit" class="profile-image">
+
+            <div class="hero-image-wrapper">
+                <!-- Terminal window decoration -->
+                <div class="terminal-window" aria-hidden="true">
+                    <div class="terminal-bar">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                        <span class="terminal-title">~/portfolio</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">whoami</span></div>
+                        <div class="terminal-line t-out">Abdul Muqit Afzal</div>
+                        <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">cat skills.txt</span></div>
+                        <div class="terminal-line t-out">Python · Java · SQL · ML</div>
+                        <div class="terminal-line t-out">React · Data Science · NLP</div>
+                        <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cmd">echo $status</span></div>
+                        <div class="terminal-line t-out t-green">Always Learning ✓</div>
+                        <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cursor">█</span></div>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img src="assets/images/AbdulMuqit.jpg" alt="Abdul Muqit Afzal" class="profile-image">
+                </div>
             </div>
         </div>
     </div>
+
     <div class="scroll-down">
         <a href="#about" aria-label="Scroll down"><i class="fas fa-chevron-down"></i></a>
     </div>

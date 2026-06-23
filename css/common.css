@@ -1,18 +1,8 @@
 /**
- * COMMON STYLES
- * 
- * This file contains common styles and components that are shared across multiple sections.
- * This helps avoid duplication and ensures consistency across the site.
- * 
- * Organization:
- * - Section headings
- * - Card styles
- * - Tag styles
- * - Animation keyframes
- * - Common utilities
+ * COMMON STYLES — shared utilities, animations, card/tag patterns
  */
 
-/* Section Heading Styles */
+/* ── Section Headings ─────────────────────── */
 .section-heading {
   text-align: center;
   margin-bottom: var(--spacing-lg);
@@ -27,15 +17,24 @@
   margin-bottom: 0.5rem;
 }
 
+/* Accent prefix dot */
+.section-heading h2::before {
+  content: '// ';
+  color: var(--primary-color);
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
 .underline {
   height: 4px;
   width: 70px;
-  background: var(--primary-color);
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
   margin: 0.5rem auto;
   border-radius: 4px;
 }
 
-/* Common sub-heading style */
 .sub-heading {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
@@ -45,7 +44,7 @@
   border-left: 4px solid var(--primary-color);
 }
 
-/* Common card styles */
+/* ── Cards ────────────────────────────────── */
 .card-shadow {
   box-shadow: 0 2px 10px var(--shadow-color);
   transition: transform var(--transition-normal), box-shadow var(--transition-normal);
@@ -56,7 +55,7 @@
   box-shadow: 0 8px 20px var(--shadow-color);
 }
 
-/* Common tag styles */
+/* ── Tags ─────────────────────────────────── */
 .tag-container {
   display: flex;
   flex-wrap: wrap;
@@ -74,61 +73,37 @@
   gap: 0.3rem;
 }
 
-/* Common animation keyframes */
+/* ── Keyframe Animations ──────────────────── */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes slideInFromLeft {
-  from {
-    transform: translateX(-30px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+  from { transform: translateX(-30px); opacity: 0; }
+  to   { transform: translateX(0);     opacity: 1; }
 }
 
 @keyframes slideInFromRight {
-  from {
-    transform: translateX(30px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+  from { transform: translateX(30px);  opacity: 0; }
+  to   { transform: translateX(0);     opacity: 1; }
 }
 
-/* Common utilities */
-.text-center {
-  text-align: center;
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(var(--primary-color-rgb), 0); }
+  50%       { box-shadow: 0 0 16px 4px rgba(var(--primary-color-rgb), 0.25); }
 }
 
-.text-primary {
-  color: var(--primary-color);
-}
-
-.text-light {
-  color: var(--text-color-light);
-}
+/* ── Utilities ────────────────────────────── */
+.text-center  { text-align: center; }
+.text-primary { color: var(--primary-color); }
+.text-light   { color: var(--text-color-light); }
+.mono         { font-family: var(--font-mono); }
 
 .mt-1 { margin-top: var(--spacing-xs); }
 .mt-2 { margin-top: var(--spacing-sm); }

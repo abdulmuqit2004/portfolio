@@ -30,6 +30,13 @@
     font-weight: 700;
     color: var(--primary-color);
     text-decoration: none;
+    font-family: var(--font-mono);
+    letter-spacing: -0.02em;
+}
+
+.logo-bracket {
+    color: var(--secondary-color);
+    opacity: 0.8;
 }
 
 /* Navigation menu */

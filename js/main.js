@@ -25,17 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Theme Switcher
     function initTheme() {
         const savedTheme = localStorage.getItem('theme');
-        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        
-        // Remove existing theme classes to start clean
         body.classList.remove('dark-theme', 'light-theme');
 
-        if (savedTheme === 'dark') {
-            body.classList.add('dark-theme');
-        } else if (savedTheme === 'light') {
+        if (savedTheme === 'light') {
             body.classList.add('light-theme');
         } else {
-            body.classList.add('light-theme'); // Default to light theme
+            body.classList.add('dark-theme'); // Default to dark theme
         }
     }
 
@@ -299,7 +294,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     setupHorizontalScroll('projects');
-    setupHorizontalScroll('certifications');
 
     // Intersection Observer for animations
     function setupIntersectionObserver() {
@@ -314,19 +308,71 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('section, .timeline-item').forEach(el => observer.observe(el));
     }
 
+    // Typed.js — hero typewriter effect
+    function initTyped() {
+        const el = document.getElementById('typed-roles');
+        if (!el || typeof Typed === 'undefined') return;
+        new Typed(el, {
+            strings: [
+                'Software Engineering',
+                'Data Science',
+                'Machine Learning',
+                'NLP & LLMs',
+                'Full-Stack Web Dev',
+            ],
+            typeSpeed: 55,
+            backSpeed: 30,
+            backDelay: 1800,
+            loop: true,
+            smartBackspace: true,
+        });
+    }
+
+    // AOS — Animate on Scroll
+    function initAOS() {
+        if (typeof AOS !== 'undefined') {
+            AOS.init({ duration: 600, easing: 'ease-out-cubic', once: true, offset: 60 });
+        }
+    }
+
+    // Coursework category filter
+    function initCourseFilters() {
+        const filters = document.querySelectorAll('.course-filter');
+        const cards   = document.querySelectorAll('.course-card');
+        if (!filters.length) return;
+
+        filters.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filters.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const cat = btn.dataset.category;
+                cards.forEach(card => {
+                    if (cat === 'all' || card.dataset.category === cat) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    }
+
     // Initialize Functions
-    initTheme(); 
+    initTheme();
     setupIntersectionObserver();
+    initTyped();
+    initAOS();
+    initCourseFilters();
 
     // Event Listeners
     window.addEventListener('scroll', () => {
         setActiveLink();
         toggleScrollToTopBtn();
     });
-    
+
     setActiveLink();
     toggleScrollToTopBtn();
-    
+
     console.log('Site initialization complete.');
     };
     

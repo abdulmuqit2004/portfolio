@@ -1,182 +1,131 @@
 <!-- Relevant Coursework Section -->
-<section class="certifications section horizontal-scroll-enabled" id="coursework">
+<section class="certifications section" id="coursework">
     <div class="container">
-        <div class="section-heading">
+        <div class="section-heading" data-aos="fade-up">
             <h2>Relevant Coursework</h2>
             <div class="underline"></div>
+            <p class="section-subtitle">The foundation I've been building on</p>
         </div>
 
-        <!-- Scroll Arrows -->
-        <div class="scroll-arrow-container">
-            <button class="scroll-arrow prev-arrow" aria-label="Previous items">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="scroll-arrow next-arrow" aria-label="Next items">
-                <i class="fas fa-chevron-right"></i>
-            </button>
+        <!-- Category filter chips -->
+        <div class="course-filters" data-aos="fade-up" data-aos-delay="100">
+            <button class="course-filter active" data-category="all">All</button>
+            <button class="course-filter" data-category="cs">CS Core</button>
+            <button class="course-filter" data-category="ml">ML / AI</button>
+            <button class="course-filter" data-category="math">Math</button>
+            <button class="course-filter" data-category="data">Data</button>
         </div>
 
-        <!-- Horizontal Scroll -->
-        <div class="horizontal-scroll-wrapper">
-            <div class="scroll-content certifications-grid">
+        <div class="course-grid">
 
-                <div class="cert-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <div class="cert-content">
-                        <h3 class="cert-title">Database Systems</h3>
-                        <p class="cert-status completed">Completed</p>
-                        <p class="cert-description">
-                            Relational databases, SQL, normalization, indexing, and query design.
-                        </p>
-                    </div>
+            <div class="course-card" data-category="cs" data-aos="fade-up" data-aos-delay="100">
+                <div class="course-icon cs"><i class="fas fa-database"></i></div>
+                <div class="course-body">
+                    <span class="course-tag cs">CS Core</span>
+                    <h3>Database Systems</h3>
+                    <p>Relational databases, SQL, normalization, indexing, query design.</p>
                 </div>
+            </div>
 
-                <div class="cert-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-project-diagram"></i>
-                    </div>
-                    <div class="cert-content">
-                        <h3 class="cert-title">Data Structures & Algorithms</h3>
-                        <p class="cert-status completed">Completed</p>
-                        <p class="cert-description">
-                            Core data structures, algorithm analysis, and problem-solving techniques.
-                        </p>
-                    </div>
+            <div class="course-card" data-category="cs" data-aos="fade-up" data-aos-delay="120">
+                <div class="course-icon cs"><i class="fas fa-project-diagram"></i></div>
+                <div class="course-body">
+                    <span class="course-tag cs">CS Core</span>
+                    <h3>Data Structures &amp; Algorithms</h3>
+                    <p>Core data structures, algorithm analysis, problem-solving techniques.</p>
                 </div>
+            </div>
 
-                <div class="cert-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-sitemap"></i>
-                    </div>
-                    <div class="cert-content">
-                        <h3 class="cert-title">Analysis and Design of Algorithms</h3>
-                        <p class="cert-status completed">Completed</p>
-                        <p class="cert-description">
-                            Algorithm design paradigms, complexity analysis, dynamic programming, and graph algorithms.
-                        </p>
-                    </div>
+            <div class="course-card" data-category="cs" data-aos="fade-up" data-aos-delay="140">
+                <div class="course-icon cs"><i class="fas fa-sitemap"></i></div>
+                <div class="course-body">
+                    <span class="course-tag cs">CS Core</span>
+                    <h3>Analysis &amp; Design of Algorithms</h3>
+                    <p>Algorithm paradigms, complexity analysis, dynamic programming, graph algorithms.</p>
                 </div>
+            </div>
 
-                <div class="cert-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-superscript"></i>
-                    </div>
-                    <div class="cert-content">
-                        <h3 class="cert-title">Discrete Mathematics</h3>
-                        <p class="cert-status completed">Completed</p>
-                        <p class="cert-description">
-                            Logic, sets, functions, combinatorics, proof techniques, and graph theory.
-                        </p>
-                    </div>
+            <div class="course-card" data-category="cs" data-aos="fade-up" data-aos-delay="160">
+                <div class="course-icon cs"><i class="fas fa-cogs"></i></div>
+                <div class="course-body">
+                    <span class="course-tag cs">CS Core</span>
+                    <h3>Software Design &amp; Analysis</h3>
+                    <p>Software architecture, design patterns, UML, testing, best practices.</p>
                 </div>
+            </div>
 
-                <div class="cert-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-square-root-alt"></i>
-                    </div>
-                    <div class="cert-content">
-                        <h3 class="cert-title">Linear Algebra</h3>
-                        <p class="cert-status completed">Completed</p>
-                        <p class="cert-description">
-                            Matrices, vector spaces, eigenvalues/eigenvectors for ML and data science.
-                        </p>
-                    </div>
+            <div class="course-card" data-category="math" data-aos="fade-up" data-aos-delay="180">
+                <div class="course-icon math"><i class="fas fa-superscript"></i></div>
+                <div class="course-body">
+                    <span class="course-tag math">Math</span>
+                    <h3>Discrete Mathematics</h3>
+                    <p>Logic, sets, combinatorics, proof techniques, graph theory.</p>
                 </div>
+            </div>
 
-                <div class="cert-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-square-root-alt"></i>
-                    </div>
-                    <div class="cert-content">
-                        <h3 class="cert-title">Advanced Linear Algebra & Applications</h3>
-                        <p class="cert-status completed">Completed</p>
-                        <p class="cert-description">
-                            Advanced matrix methods and applications for high-dimensional ML problems.
-                        </p>
-                    </div>
+            <div class="course-card" data-category="math" data-aos="fade-up" data-aos-delay="200">
+                <div class="course-icon math"><i class="fas fa-square-root-alt"></i></div>
+                <div class="course-body">
+                    <span class="course-tag math">Math</span>
+                    <h3>Linear Algebra</h3>
+                    <p>Matrices, vector spaces, eigenvalues — foundations for ML and data science.</p>
                 </div>
+            </div>
 
-                <div class="cert-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="cert-content">
-                        <h3 class="cert-title">Scientific Data Analysis</h3>
-                        <p class="cert-status completed">Completed</p>
-                        <p class="cert-description">
-                            Statistical analysis, regression, numerical methods, and error analysis.
-                        </p>
-                    </div>
+            <div class="course-card" data-category="math" data-aos="fade-up" data-aos-delay="220">
+                <div class="course-icon math"><i class="fas fa-square-root-alt"></i></div>
+                <div class="course-body">
+                    <span class="course-tag math">Math</span>
+                    <h3>Advanced Linear Algebra &amp; Applications</h3>
+                    <p>Advanced matrix methods for high-dimensional ML problems.</p>
                 </div>
+            </div>
 
-                <div class="cert-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <div class="cert-content">
-                        <h3 class="cert-title">Software Design & Analysis</h3>
-                        <p class="cert-status completed">Completed</p>
-                        <p class="cert-description">
-                            Software architecture, design patterns, UML, testing, and best practices.
-                        </p>
-                    </div>
+            <div class="course-card" data-category="data" data-aos="fade-up" data-aos-delay="240">
+                <div class="course-icon data"><i class="fas fa-chart-line"></i></div>
+                <div class="course-body">
+                    <span class="course-tag data">Data</span>
+                    <h3>Scientific Data Analysis</h3>
+                    <p>Statistical analysis, regression, numerical methods, error analysis.</p>
                 </div>
+            </div>
 
-                <div class="cert-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="cert-content">
-                        <h3 class="cert-title">Machine Learning</h3>
-                        <p class="cert-status completed">Completed</p>
-                        <p class="cert-description">
-                            Supervised & unsupervised learning, model evaluation, regularization.
-                        </p>
-                    </div>
+            <div class="course-card" data-category="data" data-aos="fade-up" data-aos-delay="260">
+                <div class="course-icon data"><i class="fas fa-chart-pie"></i></div>
+                <div class="course-body">
+                    <span class="course-tag data">Data</span>
+                    <h3>Information Visualization</h3>
+                    <p>Visual analytics, dashboard design, human-centered data communication.</p>
                 </div>
+            </div>
 
-                <div class="cert-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <div class="cert-content">
-                        <h3 class="cert-title">Machine Learning 2</h3>
-                        <p class="cert-status completed">Completed</p>
-                        <p class="cert-description">
-                            Advanced ML topics including ensembles, deep learning, and optimization.
-                        </p>
-                    </div>
+            <div class="course-card" data-category="ml" data-aos="fade-up" data-aos-delay="280">
+                <div class="course-icon ml"><i class="fas fa-robot"></i></div>
+                <div class="course-body">
+                    <span class="course-tag ml">ML / AI</span>
+                    <h3>Machine Learning</h3>
+                    <p>Supervised &amp; unsupervised learning, model evaluation, regularization.</p>
                 </div>
+            </div>
 
-                <div class="cert-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-language"></i>
-                    </div>
-                    <div class="cert-content">
-                        <h3 class="cert-title">Natural Language Processing</h3>
-                        <p class="cert-status completed">Completed</p>
-                        <p class="cert-description">
-                            Text processing, embeddings, sequence models, and LLM foundations.
-                        </p>
-                    </div>
+            <div class="course-card" data-category="ml" data-aos="fade-up" data-aos-delay="300">
+                <div class="course-icon ml"><i class="fas fa-brain"></i></div>
+                <div class="course-body">
+                    <span class="course-tag ml">ML / AI</span>
+                    <h3>Machine Learning 2</h3>
+                    <p>Ensembles, deep learning, advanced optimization techniques.</p>
                 </div>
+            </div>
 
-                <div class="cert-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-chart-pie"></i>
-                    </div>
-                    <div class="cert-content">
-                        <h3 class="cert-title">Information Visualization</h3>
-                        <p class="cert-status completed">Completed</p>
-                        <p class="cert-description">
-                            Visual analytics, dashboard design, and human-centered data communication.
-                        </p>
-                    </div>
+            <div class="course-card" data-category="ml" data-aos="fade-up" data-aos-delay="320">
+                <div class="course-icon ml"><i class="fas fa-language"></i></div>
+                <div class="course-body">
+                    <span class="course-tag ml">ML / AI</span>
+                    <h3>Natural Language Processing</h3>
+                    <p>Text processing, embeddings, sequence models, LLM foundations.</p>
                 </div>
+            </div>
 
-            </div> <!-- /.scroll-content -->
-        </div> <!-- /.horizontal-scroll-wrapper -->
+        </div>
     </div>
 </section>
