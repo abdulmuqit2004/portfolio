@@ -121,6 +121,23 @@
     font-weight: 600;
 }
 
+/* Current roles typed line */
+.hero-roles-line {
+    font-size: 0.95rem;
+    color: var(--text-color-light);
+    margin-bottom: 1.8rem;
+    min-height: 1.5em;
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.roles-prompt {
+    color: var(--primary-color);
+    opacity: 0.7;
+    flex-shrink: 0;
+}
+
 /* Typed.js cursor */
 .typed-cursor {
     color: var(--primary-color);

@@ -326,6 +326,21 @@ document.addEventListener('DOMContentLoaded', () => {
             loop: true,
             smartBackspace: true,
         });
+
+        const el2 = document.getElementById('typed-roles-current');
+        if (!el2) return;
+        new Typed(el2, {
+            strings: [
+                'Web Developer @ Ontario Tech Faculty of Business &amp; IT',
+                'President @ Ontario Tech CS Club',
+                'Founder @ Brandlifters.ca',
+            ],
+            typeSpeed: 45,
+            backSpeed: 25,
+            backDelay: 2400,
+            loop: true,
+            smartBackspace: false,
+        });
     }
 
     // AOS — Animate on Scroll

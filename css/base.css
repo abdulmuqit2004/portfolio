@@ -4,20 +4,32 @@
 
 /* ======= CSS Variables ======= */
 :root {
-    /* Light Theme — crisp baby blue */
-    --primary-color: #4AABDC;
-    --primary-color-rgb: 74, 171, 220;
-    --secondary-color: #2E8FBF;
-    --accent-color: #89CFF0;
-    --text-color: #1A2B38;
-    --text-color-light: #5C7A8A;
-    --bg-color: #F7FBFF;
-    --bg-color-alt: #EAF4FB;
+    /* Light Theme — crisp baby blue base */
+    --primary-color: #0EA5E9;
+    --primary-color-rgb: 14, 165, 233;
+    --secondary-color: #0284C7;
+    --accent-color: #38BDF8;
+    --text-color: #0F172A;
+    --text-color-light: #475569;
+    --bg-color: #F8FAFF;
+    --bg-color-alt: #EFF6FF;
     --card-bg: #FFFFFF;
-    --border-color: #C5DFF0;
-    --shadow-color: rgba(74, 171, 220, 0.12);
-    --success-color: #4caf50;
-    --glow-color: rgba(74, 171, 220, 0.35);
+    --border-color: #CBD5E1;
+    --shadow-color: rgba(14, 165, 233, 0.12);
+    --success-color: #22C55E;
+    --glow-color: rgba(14, 165, 233, 0.3);
+
+    /* Vibrant accent palette — light */
+    --color-cyan:   #0891B2;
+    --color-cyan-rgb: 8, 145, 178;
+    --color-purple: #9333EA;
+    --color-purple-rgb: 147, 51, 234;
+    --color-green:  #16A34A;
+    --color-green-rgb: 22, 163, 74;
+    --color-amber:  #D97706;
+    --color-amber-rgb: 217, 119, 6;
+    --color-pink:   #DB2777;
+    --color-pink-rgb: 219, 39, 119;
 
     /* Monospace font */
     --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
@@ -43,18 +55,30 @@
 
 /* ======= Dark Theme Variables ======= */
 .dark-theme {
-    --primary-color: #89CFF0;
-    --primary-color-rgb: 137, 207, 240;
-    --secondary-color: #5BBFE8;
-    --accent-color: #A8DADC;
-    --text-color: #CDE4F5;
-    --text-color-light: #7AACCC;
-    --bg-color: #0C1220;
-    --bg-color-alt: #131D2E;
-    --card-bg: #131D2E;
-    --border-color: #2A3F56;
-    --shadow-color: rgba(0, 0, 0, 0.4);
-    --glow-color: rgba(137, 207, 240, 0.25);
+    --primary-color: #38BDF8;
+    --primary-color-rgb: 56, 189, 248;
+    --secondary-color: #0EA5E9;
+    --accent-color: #7DD3FC;
+    --text-color: #E2F0FB;
+    --text-color-light: #94A3B8;
+    --bg-color: #0A0F1E;
+    --bg-color-alt: #0F172A;
+    --card-bg: #111827;
+    --border-color: #1E293B;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --glow-color: rgba(56, 189, 248, 0.25);
+
+    /* Vibrant accent palette — dark (full saturation) */
+    --color-cyan:   #22D3EE;
+    --color-cyan-rgb: 34, 211, 238;
+    --color-purple: #C084FC;
+    --color-purple-rgb: 192, 132, 252;
+    --color-green:  #4ADE80;
+    --color-green-rgb: 74, 222, 128;
+    --color-amber:  #FBBF24;
+    --color-amber-rgb: 251, 191, 36;
+    --color-pink:   #F472B6;
+    --color-pink-rgb: 244, 114, 182;
 }
 
 /* ======= Reset ======= */

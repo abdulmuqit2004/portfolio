@@ -28,9 +28,9 @@
 }
 
 .underline {
-  height: 4px;
+  height: 3px;
   width: 70px;
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(90deg, var(--color-cyan), var(--primary-color), var(--color-purple));
   margin: 0.5rem auto;
   border-radius: 4px;
 }

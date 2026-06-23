@@ -162,14 +162,26 @@
 }
 
 .tech-tag {
-    background-color: var(--bg-color-alt);
+    background-color: rgba(var(--primary-color-rgb), 0.08);
     color: var(--primary-color);
     padding: 0.25rem 0.75rem;
     border-radius: 50px;
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     font-weight: 500;
-    border: 1px solid rgba(var(--primary-color-rgb), 0.2);
+    font-family: var(--font-mono);
+    border: 1px solid rgba(var(--primary-color-rgb), 0.3);
+    transition: all var(--transition-fast);
 }
+
+.tech-tag:hover {
+    background-color: rgba(var(--primary-color-rgb), 0.15);
+    transform: translateY(-1px);
+}
+
+/* Rotate tech tag colours in dark mode for variety */
+.dark-theme .project-card:nth-child(3n+1) .tech-tag { color: var(--color-cyan);   border-color: rgba(var(--color-cyan-rgb), 0.35);   background: rgba(var(--color-cyan-rgb), 0.08); }
+.dark-theme .project-card:nth-child(3n+2) .tech-tag { color: var(--color-purple); border-color: rgba(var(--color-purple-rgb), 0.35); background: rgba(var(--color-purple-rgb), 0.08); }
+.dark-theme .project-card:nth-child(3n+3) .tech-tag { color: var(--color-green);  border-color: rgba(var(--color-green-rgb), 0.35);  background: rgba(var(--color-green-rgb), 0.08); }
 
 /* Project Links */
 .project-links {
