@@ -84,8 +84,12 @@
 .course-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 30px var(--shadow-color);
-    border-color: var(--primary-color);
 }
+
+.course-card[data-category="cs"]:hover   { border-color: #4AABDC; box-shadow: 0 12px 30px rgba(74,171,220,0.18); }
+.course-card[data-category="ml"]:hover   { border-color: #A78BFA; box-shadow: 0 12px 30px rgba(167,139,250,0.18); }
+.course-card[data-category="math"]:hover { border-color: #34D399; box-shadow: 0 12px 30px rgba(52,211,153,0.18); }
+.course-card[data-category="data"]:hover { border-color: #F59E0B; box-shadow: 0 12px 30px rgba(245,158,11,0.18); }
 
 /* hidden cards when filtered */
 .course-card.hidden {

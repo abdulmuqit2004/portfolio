@@ -378,6 +378,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initTyped();
     initAOS();
     initCourseFilters();
+    if (window.initSkillsPipeline) window.initSkillsPipeline();
 
     // Event Listeners
     window.addEventListener('scroll', () => {
