@@ -568,54 +568,161 @@ a.project-chip:hover .chip-link-icon { opacity: 1; color: var(--sc, var(--primar
 }
 
 @media (max-width: 640px) {
+  /* Fade-right gradient signals the track is horizontally scrollable */
+  .pipeline-wrapper {
+    position: relative;
+  }
+  .pipeline-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48px;
+    height: 110px; /* covers track area */
+    background: linear-gradient(to right, transparent, var(--bg-color) 85%);
+    pointer-events: none;
+    z-index: 2;
+  }
+
   .pipeline-track {
     justify-content: flex-start;
-    padding: 1rem 0 0.5rem;
+    padding: 0.75rem 0.25rem 0.5rem;
     gap: 0;
   }
 
+  .pipeline-node {
+    padding: 0.15rem 0.2rem;
+    gap: 0.4rem;
+  }
+
+  .node-ring {
+    padding: 2px;
+  }
+
   .node-circle {
-    width: 48px;
-    height: 48px;
-    font-size: 1.1rem;
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
+  }
+
+  .node-label {
+    font-size: 0.6rem;
   }
 
   .pipeline-connector {
-    min-width: 14px;
-    max-width: 28px;
+    min-width: 8px;
+    max-width: 18px;
   }
 
+  /* Panel */
   .panel-inner {
-    padding: 1.25rem 1rem;
+    padding: 1.1rem 0.9rem;
+    border-radius: 14px;
   }
 
   .panel-header {
-    gap: 0.9rem;
+    gap: 0.75rem;
+    padding-bottom: 0.9rem;
+    margin-bottom: 1rem;
   }
 
   .panel-stage-icon {
-    width: 42px;
-    height: 42px;
-    font-size: 1.1rem;
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+    border-radius: 10px;
   }
 
   .panel-title {
-    font-size: 1.15rem;
+    font-size: 1rem;
+  }
+
+  .panel-desc {
+    font-size: 0.81rem;
+  }
+
+  /* Skill tags */
+  .skill-tag {
+    font-size: 0.77rem;
+    padding: 0.38rem 0.6rem;
+  }
+
+  .skills-legend-mini {
+    font-size: 0.66rem;
+    gap: 0.25rem 0.65rem;
+    margin-top: 0.75rem;
+  }
+
+  /* Project chips */
+  .project-chip {
+    padding: 0.5rem 0.65rem;
+    gap: 0.6rem;
+  }
+
+  .chip-icon {
+    width: 26px;
+    height: 26px;
+    font-size: 0.75rem;
+    border-radius: 6px;
+  }
+
+  .chip-name {
+    font-size: 0.79rem;
+  }
+
+  .chip-tech {
+    font-size: 0.65rem;
   }
 
   .skills-all-grid {
     grid-template-columns: 1fr;
   }
+
+  .btn-all-skills {
+    font-size: 0.83rem;
+    padding: 0.55rem 1.1rem;
+  }
 }
 
 @media (max-width: 420px) {
-  .node-circle {
-    width: 40px;
-    height: 40px;
-    font-size: 1rem;
+  /* Icon-only pipeline track — labels hidden, only active shows its label */
+  .node-label {
+    display: none;
   }
 
-  .node-label {
-    font-size: 0.63rem;
+  .pipeline-node.active .node-label {
+    display: block;
+    font-size: 0.6rem;
+  }
+
+  .node-circle {
+    width: 38px;
+    height: 38px;
+    font-size: 0.9rem;
+  }
+
+  .pipeline-connector {
+    min-width: 6px;
+    max-width: 12px;
+  }
+
+  /* Stack panel header vertically on very small phones */
+  .panel-header {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .panel-stage-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 0.9rem;
+  }
+
+  .panel-title {
+    font-size: 0.95rem;
+  }
+
+  .panel-desc {
+    font-size: 0.79rem;
   }
 }
